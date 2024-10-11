@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Berita 88</title>
+		<link rel="stylesheet" href="navbar.css" />
+		<style>
+			.section-container {
+				padding: 40px 20px;
+				max-width: 1200px;
+				margin: 0 auto;
+				text-align: center;
+			}
+
+			.form-container {
+				margin-top: 20px;
+			}
+
+			.form-container input[type="text"],
+			.form-container input[type="button"] {
+				padding: 10px;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+			}
+
+			.form-container input[type="button"] {
+				background-color: #007bff;
+				color: white;
+				cursor: pointer;
+			}
+
+			.form-container input[type="button"]:hover {
+				background-color: #0056b3;
+			}
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				margin-top: 20px;
+			}
+
+			table th,
+			table td {
+				padding: 10px;
+				border: 1px solid #ddd;
+				text-align: left;
+			}
+
+			table th {
+				background-color: #f4f4f4;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a class="navbar-brand" href="utama.html">Berita88</a>
+			<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+			<ul id="nav-links">
+				<li><a href="index.html">Halaman Utama</a></li>
+				<li><a href="utama.html#tentang-kami">Tentang Kami</a></li>
+				<li><a href="berita.html">Berita</a></li>
+				<li><a href="utama.html#kontak-kami">Kontak Kami</a></li>
+				<li><a href="kirim.html">Kirim Artikel</a></li>
+			</ul>
+		</nav>
+
+		<section class="section-container" id="artikel">
+			<h2>Artikel</h2>
+			<div id="msg"></div>
+			<div class="form-container">
+				<form>
+					<input type="text" id="input" />
+				</form>
+				<input type="button" value="Submit" onclick="manageData()" />
+			</div>
+
+			<table id="table">
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Artikel</th>
+						<th>Aksi</th>
+					</tr>
+				</thead>
+				<tbody id="root"></tbody>
+			</table>
+		</section>
+
+		<script type="text/javascript" src="data.json"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
